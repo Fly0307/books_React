@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- meta:desc -->
+    <meta content="丁丁ebook书城" name="description">
+    <!-- meta:kw -->
+    <meta content="丁丁ebook书城" name="keywords">
+    <title>购物车</title>
+    <!-- link:favicon -->
+    <link href="ebook.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- 按顺序引入: 外链式样式表后写的生效 -->
+    <link href="src/css/base.css" rel="stylesheet">
+    <link href="src/css/common.css" rel="stylesheet">
+    <link href="src/css/index.css" rel="stylesheet">
+    <link href="src/css/shopcar.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- 快捷导航 -->
+<div class="shortcut">
+    <div class="wrapper">
+        <ul style="float: left"><a href="index.html">
+            <h style="font-size: 30px">丁丁书城</h>
+        </a></ul>
+        <ul>
+            <li><a href="/login.html">请先登录</a></li>
+            <li><a href="#">免费注册</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">会员中心</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">在线客服</a></li>
+            <li><a href="#"><span></span>手机版</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- 头部 -->
+<!--<div class="header wrapper">
+    <div class="logo">
+        <h1><a href="#">丁丁ebook书城</a></h1>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">电子书</a></li>
+            <li><a href="#">图书排行榜</a></li>
+            <li><a href="#">青春</a></li>
+            <li><a href="#">文学</a></li>
+            <li><a href="#">教辅</a></li>
+            <li><a href="#">艺术</a></li>
+            <li><a href="#">宗教</a></li>
+            <li><a href="#">历史</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <input placeholder="搜一搜" type="text">
+        &lt;!&ndash; 定位 放大镜 &ndash;&gt;
+        <span></span>
+    </div>
+    <div class="car">
+        <span>2</span>
+    </div>
+</div>-->
+
+
+<!-- banner -->
+<div id="gwc1">
+    <h3 id="gwc11">我的购物车&nbsp;<i>1</i></h3>
+    <h3>进行中订单&nbsp;<i>0</i></h3>
+    <h3>历史订单&nbsp;<i>0</i></h3>
+
+</div>
+<div id="gwc2">
+    <div>
+        <input checked type="checkbox"/>&nbsp;全选
+        <p>书籍信息</p>
+    </div>
+    <ul>
+        <li>操作</li>
+        <li>金额</li>
+        <li>时间</li>
+        <li>日期</li>
+    </ul>
+
+</div>
+<div id="gwc3">
+    <ul>
+        <li><input checked type="checkbox"/></li>
+
+        <li>
+            <div><img src="src/uploads/23579654-1_l_6.jpg" alt="三体"></div>
+        </li>
+        <li><a href="#">三体</a>
+            <p>作者：刘慈欣</p>
+        </li>
+
+
+        <div></div>
+        <div></div>
+        <li><p>3月10日</p></li>
+        <li>
+
+            <p>14:00</p>
+        </li>
+
+        <li>
+            <p> ￥25.00</p>
+        </li>
+        <li>
+
+            <a href="">删除</a>
+        </li>
+    </ul>
+</div>
+<div id="gwc5"></div>
+<div id="gwc4">
+
+    <div>
+        <a href="query.html">结算</a>
+        <p>￥25.00</p>
+        <p>合计</p>
+    </div>
+</div>
+<!--<div class="market-wrapper" id="cart">
+    <div class="cart-header" id="cart-header">
+        <h2>购物车</h2>
+    </div>
+
+    <div class="cart-section" id="cart-section">
+        <div class="cart-content">
+
+            <table class="cart-table-header">
+                <tbody>
+                <tr>
+                    <th class="checkout"></th>
+                    <th class="cart-item-info">商品信息</th>
+                    <th class="cart-item-price">单价（元）</th>
+                    <th class="cart-item-picker">数量</th>
+                    <th class="cart-item-amount">小计（元）</th>
+                    <th class="cart-item-actions"></th>
+                </tr>
+                </tbody>
+            </table>
+            <div class="shop-card-list">
+                <div class="shop-card">
+                    <div class="shop-header"><span class="simulate-checkbox shop-checkbox checked"><i
+                            class="drc-icon right"></i></span>
+                        <div class="shop-name">豆瓣优选</div>
+                        <a class="sobot-icon"><i class="drc-icon service market-sobot"></i><em>联系客服</em></a></div>
+                    <div class="shop-content-wrap">
+                        <div class="shop-content">
+                            <table class="drc-table basic">
+                                <tbody>
+                                <tr class="item-row">
+                                    <td class="cart-item-info border-bottom">
+                                        <div class="cart-item">
+                                            <div class="item-pic"><a href="https://market.douban.com/book/fugao"
+                                                                     target="_blank"><img
+                                                    src="https://img9.doubanio.com/view/dianpu_product_item/small/public/p25542685.jpg"></a>
+                                            </div>
+                                            <div class="cart-item-detail"><p class="item-title"><a
+                                                    href="https://market.douban.com/book/fugao"
+                                                    target="_blank">讣告</a></p>
+                                                <div class="item-info"><p>颜色 : 灰</p>
+                                                    <p>尺寸 : 大32开</p></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart-item-price border-bottom"><span class="item-price"><em><i>¥</i>88</em></span>
+                                    </td>
+                                    <td class="cart-item-picker border-bottom">
+                                        <div class="item-number-picker">
+                                            <div class="drc-number-picker"><i
+                                                    class="drc-number-picker-button drc-icon subtract disabled"></i><span
+                                                    class="current-number number-content">1</span><i
+                                                    class="drc-number-picker-button drc-icon plus"></i></div>
+                                        </div>
+                                    </td>
+                                    <td class="cart-item-amount border-bottom"><span class="item-amount"><i>¥</i>88</span>
+                                    </td>
+                                    <td class="cart-item-actions border-bottom" rowspan="1">
+                                        <button class="drc-button smoke basic" color="smoke" tag="button"
+                                                type="button"><i class="drc-icon close"></i></button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-footer-wrapper fixed">
+                <div class="market-wrapper">
+                    <div class="cart-footer">
+                        <div class="cart-actions"><label class="select-all"><span class="simulate-checkbox checked"><i
+                                class="drc-icon right"></i></span><span
+                                class="select-all-text">全选</span></label><span
+                                class="quantity-all">已选择<b>1</b>件商品</span></div>
+                        <div class="cart-info"><span class="amount-all"><span class="amount"><em class="freight">不含运费</em><em
+                                class="amount-text">合计：</em><b>¥ 88</b></span></span>
+                            <button class="drc-button l red" color="red" tag="button" type="button">结算</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+&lt;!&ndash; <div class="book">
+     <img src="uploads/29366900-1_l_13.jpg"></img>
+ </div>&ndash;&gt;
+
+&lt;!&ndash;<div class="wrapper">
+    &lt;!&ndash; 有多少个图,就有多少个li &ndash;&gt;
+    <ul>
+        <li>
+            <a href="#"><img src="" alt=""></a>
+        </li>
+    </ul>
+
+    &lt;!&ndash; 侧导航 &ndash;&gt;
+   &lt;!&ndash; <div class="aside">
+        <ul>
+            <li><a href="#">个人中心<span></span></a></li>
+            <li><a href="#">订单管理<span></span></a></li>
+            <li><a href="#">购物车<span></span></a></li>
+            <li><a href="#">物流跟踪<span></span></a></li>
+
+        </ul>
+    </div>&ndash;&gt;
+
+    &lt;!&ndash; 箭头 &ndash;&gt;
+    &lt;!&ndash; prev: 上一个 &ndash;&gt;
+   &lt;!&ndash; <a href="#" class="prev"></a>
+    &lt;!&ndash; next : 下一个 &ndash;&gt;
+    <a href="#" class="next"></a>&ndash;&gt;
+
+
+    <ol>
+        <li></li>
+        <li></li>
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>&ndash;&gt;
+</div>-->
+
+<!-- 图书展示 -->
+<!--<div class="goods wrapper">
+    &lt;!&ndash; hd header 头部 &ndash;&gt;
+    <div class="hd">
+        <h2>独家特供<span><a href="#">新书畅销 主编推荐</a></span></h2>
+        <a href="#">查看全部</a>
+    </div>
+    &lt;!&ndash; body 身体, 内容 &ndash;&gt;
+    <div class="bd clearfix">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="./uploads/23579654-1_l_6.jpg" alt="">
+                    <h3>三体全集</h3>
+                    <div>￥<span>89</span></div>
+                    <b>新品</b>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./uploads/22937060-1_l_6.jpg" alt="">
+                    <h3>吴姐姐讲历史故事</h3>
+                    <div>￥<span>99</span></div>
+                    <b>新品</b>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./uploads/25207583-1_l_8.jpg" alt="">
+                    <h3>人世间</h3>
+                    <div>￥<span>67</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./uploads/27943126-1_l_16.jpg" alt="">
+                    <h3>沙丘</h3>
+                    <div>￥<span>68</span></div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>-->
+
+<!-- 书评 -->
+<div class="shuping wrapper">
+    <div class="hd">
+        <h2>读者推荐</h2>
+        <a class="more" href="#">查看全部</a>
+        <ul>
+            <li><a href="#">好评最多</a></li>
+            <li><a href="#">销量最高</a></li>
+            <li><a href="#">最受关注</a></li>
+            <li><a href="#">人气收藏</a></li>
+            <li><a href="#">经典选读</a></li>
+
+        </ul>
+    </div>
+    <div class="bd clearfix">
+        <div class="left">
+            <p style="margin:20px">
+                <a href="#"><img alt="" src="src/uploads/24106647-1_b_20.jpg"></a>
+            </p>
+        </div>
+        <div class="right">
+            <div>
+                <p>
+                    基于该教材的北大“计算机系统导论”课程实施已有五年，得到了学生的广泛赞誉，学生们通过这门课程的学习建立了完整的计算机系统的知识体系和整体知识框架，养成了良好的编程习惯并获得了编写高性能、可移植和健壮的程序的能力，奠定了后续学习操作系统、编译、计算机体系结构等专业课程的基础。北大的教学实践表明，这是一本值得推荐采用的好教材。本书第3版采用*x86-64架构来贯穿各部分知识。我相信，该书的出版将有助于国内计算机系统教学的进一步改进，为培养从事系统级创新的计算机人才奠定很好的基础。
+
+                <p style="text-align: right">—— 梅 宏 中国科学院院士/发展中国家科学院院士</p>
+                </p>
+                <pre> </pre>
+                <p>
+                    以低年级开设“深入理解计算机系统”课程为基础，我先后在复旦大学和上海交通大学软件学院主导了激进的教学改革……现在我课题组的青年教师全部是首批经历此教学改革的学生。本科的扎实基础为他们从事系统软件的研究打下了良好的基础……师资力量的补充又为推进更加激进的教学改革创造了条件。
+                <p style="text-align: right">—— 臧斌宇 上海交通大学软件学院院长</p>
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <!-- 箭头 -->
+        <!-- prev: 上一个 -->
+        <a class="prev_" href="#"></a>
+        <!-- next : 下一个 -->
+        <a class="next_" href="#"></a>
+    </div>
+</div>
+
+<!-- 版权区域 -->
+<div class="footer">
+    <div class="wrapper">
+        <div class="top">
+            <ul>
+                <li>
+                    <!-- 通过伪元素添加标签实现精灵图 -->
+                    <span>正版签约</span>
+                </li>
+                <li>
+                    <span>物流快捷</span>
+                </li>
+                <li>
+                    <span>品质保障</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <p>
+                <a href="#">关于我们</a> |
+                <a href="#">帮助中心</a> |
+                <a href="#">售后服务</a> |
+                <a href="#">配送与验收</a> |
+                <a href="#">商务合作</a> |
+                <a href="#">搜索推荐</a> |
+                <a href="#">友情链接</a>
+            </p>
+            <p>CopyRight @ 东川路</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

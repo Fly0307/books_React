@@ -1,0 +1,459 @@
+/* 放index页面的样式表 */
+/* banner */
+.banner {
+    height: 640px;
+    background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    background-color: pink;
+    background-size: cover;
+    background-image: url('src/images/202203011923479586.jpg');
+}
+
+/*.banner .wrapper image{
+    width: 100%;
+    height: auto;
+    background-image: url('../images/202203011923479586.jpg');
+    background-size: cover;
+    border: 1px solid red;
+}*/
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    position: relative;
+    /* 宽度和父级一样 */
+    padding-left: 36px;
+    padding-right: 19px;
+    display: block;
+    height: 50px;
+
+    color: #fff;
+}
+
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+/* a的里面最后的位置添加箭头 */
+.banner .aside a::after {
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: '';
+    width: 6px;
+    height: 11px;
+    background-image: url(src/images/sprites.png);
+    background-position: -80px -110px;
+}
+
+/* 箭头 */
+.next,
+.prev {
+    position: absolute;
+    top: 228px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, .2);
+    background-image: url(src/images/sprites.png);
+    border-radius: 50%;
+}
+
+/* 背景图位置负责2件事: 改变箭头在盒子里面的位置; 改变精灵图的位置 */
+/* 导致在精灵图中测量的尺寸不准确 */
+/* 解决方案有2种:
+    1. 书写背景图位置属性, 借助谷歌的调试工具调试具体的位置数值
+    2. 书写标签的时候, a负责盒子,里面再添加一个span负责箭头
+*/
+.prev {
+    left: 260px;
+    background-position: 14px -60px;
+}
+
+.next {
+    right: 10px;
+    background-position: -23px -60px;
+}
+
+/* 圆点 */
+.banner ol {
+    position: absolute;
+    left: 680px;
+    bottom: 30px;
+
+    height: 10px;
+}
+
+.banner ol li {
+    float: left;
+    margin-right: 24px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner ol .current {
+    background-color: #fff;
+}
+
+/* 新鲜好物 */
+
+.goods .hd {
+    height: 114px;
+    line-height: 114px;
+}
+
+.goods .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+
+    height: 114px;
+}
+
+.goods .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.goods .hd a,
+.shuping .hd .more {
+    float: right;
+    color: #999;
+}
+
+.goods .hd a::after,
+.shuping .hd .more::after {
+    content: '';
+    display: inline-block;
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    background-image: url(src/images/sprites.png);
+    background-position: 0 -110px;
+    vertical-align: middle;
+}
+
+.goods .bd li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 405px;
+    background-color: #f0f9f4;
+    text-align: center;
+}
+
+.goods .bd li:last-child {
+    margin-right: 0;
+}
+
+.goods .bd li img {
+    width: 304px;
+}
+
+.goods .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.goods .bd li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.goods .bd li div span {
+    font-size: 23px;
+}
+
+.goods .bd li b {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* 书评 */
+.shuping .hd {
+    height: 96px;
+    line-height: 96px;
+
+}
+
+.shuping .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.shuping .hd .more {
+    float: right;
+}
+
+.shuping .hd ul {
+    float: right;
+    margin-right: 65px;
+}
+
+.shuping .hd ul li {
+    float: left;
+}
+
+.shuping .hd li a {
+    padding: 2px 7px;
+    margin-left: 6px;
+}
+
+.shuping .hd li a:hover {
+    background-color: #27ba9b;
+    color: #fff;
+}
+
+.shuping .bd .left {
+    float: left;
+    width: 240px;
+    height: 610px;
+    background-color: rgba(71, 186, 39, 0.63);
+
+}
+
+.shuping .bd .left p {
+    width: 400px;
+    height: 400px;
+    line-height: 500px; /* 行高等于高度 */
+}
+
+.shuping .bd .left p img {
+
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.shuping .bd .right {
+    float: left;
+    padding: 50px;
+    width: 1000px;
+    height: 610px;
+    background: rgba(229, 227, 227, 0.7);
+    /*字间距*/
+    text-indent: 70px;
+    text-align: justify;
+    letter-spacing: 10px;
+}
+
+/* 箭头 */
+.next_,
+.prev_ {
+    position: absolute;
+    bottom: -350px;
+    width: 45px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .2);
+    background-image: url(src/images/sprites.png);
+    border-radius: 50%;
+}
+
+/* 背景图位置负责2件事: 改变箭头在盒子里面的位置; 改变精灵图的位置 */
+/* 导致在精灵图中测量的尺寸不准确 */
+/* 解决方案有2种:
+    1. 书写背景图位置属性, 借助谷歌的调试工具调试具体的位置数值
+    2. 书写标签的时候, a负责盒子,里面再添加一个span负责箭头
+*/
+.prev_ {
+    left: 10vw;
+    background-position: 15px -60px;
+}
+
+.next_ {
+    right: 10vw;
+    background-position: -23px -60px;
+}
+
+/*书籍详情展示页*/
+
+.book {
+    position: absolute;
+    bottom: 90px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 24px 24px 48px #c1c1c2,
+    -24px -24px 48px #ffffff;
+    background-image: url("src/uploads/29366900-1_l_13.jpg")
+}
+
+.main_menu .fl div {
+    padding: 25px;
+    background-size: cover;
+    color: #fff;
+
+}
+
+.center_con {
+    width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+    /*background: yellow;*/
+}
+
+.center_con .main_menu {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.goods_detail_list {
+    width: 730px;
+    height: 350px;
+    margin-top: 45px;
+}
+
+.goods_detail_list h3 {
+    font-size: 24px;
+    line-height: 24px;
+    color: #666;
+    font-weight: normal;
+}
+
+.goods_detail_list p {
+    color: #666;
+    line-height: 40px;
+}
+
+.prize_bar {
+    height: 72px;
+    background-color: #fff5f5;
+    line-height: 72px;
+}
+
+.prize_bar .show_prize {
+    font-size: 20px;
+    color: #ff3e3e;
+    padding-left: 20px
+}
+
+.prize_bar .show_pirze em {
+    font-style: normal;
+    font-size: 36px;
+    padding-left: 10px
+}
+
+.prize_bar .show_unit {
+    padding-left: 150px;
+}
+
+.goods_num {
+    height: 52px;
+    margin-top: 19px;
+    /*background: yellow;*/
+}
+
+.goods_num .num_name {
+    width: 70px;
+    height: 52px;
+    line-height: 52px;
+}
+
+.goods_num .num_add {
+    width: 75px;
+    height: 50px;
+
+}
+
+.goods_num .num_add .num_show {
+    width: 49px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 0px;
+    outline: none;
+    font-size: 14px;
+    color: #666;
+}
+
+.goods_num .num_add .add, .goods_num .num_add .minus {
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    font-size: 14px;
+}
+
+.goods_num .num_add .minus {
+    border-bottom: 0px;
+}
+
+.total {
+    height: 35px;
+    line-height: 35px;
+    margin-top: 25px;
+    /*background: yellow;*/
+}
+
+.total em {
+    font-style: normal;
+    color: #ff3e3e;
+    font-size: 18px
+}
+
+.operate_btn {
+    height: 40px;
+    margin-top: 35px;
+    font-size: 0;
+    position: relative;
+}
+
+.operate_btn .buy_btn, .operate_btn .add_cart {
+    display: inline-block;
+    width: 178px;
+    height: 38px;
+    border: 1px solid #c40000;
+    font-size: 14px;
+    color: #c40000;
+    line-height: 38px;
+    text-align: center;
+    background-color: #ffeded;
+}
+
+.operate_btn .add_cart {
+    background-color: #c40000;
+    color: #fff;
+    margin-left: 10px;
+    position: relative;
+    z-index: 10;
+}
+
